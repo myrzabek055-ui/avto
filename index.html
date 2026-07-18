@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Velocity Auto — премиальный автосалон в Бишкеке. Новые и проверенные автомобили, кредит, рассрочка, trade-in и тест-драйв."
+    >
+
+    <title>Velocity Auto — премиальный автосалон</title>
+
+    <!-- Общие стили -->
+    <link rel="stylesheet" href="./css/global.css">
+
+    <!-- Header -->
+    <link rel="stylesheet" href="./css/header.css">
+
+    <!-- Главная страница -->
+    <link rel="stylesheet" href="./css/hero.css">
+    <link rel="stylesheet" href="./css/popular.css">
+    <link rel="stylesheet" href="./css/advantages.css">
+    <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="./css/test-drive.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/preloader.css">
+
+    <!-- Адаптив -->
+    <link rel="stylesheet" href="./css/responsive.css">
+</head>
+
+<body>
+    <!-- ================= PRELOADER ================= -->
+
+<div class="preloader" id="preloader">
+
+    <div class="preloader__content">
+
+        <div class="preloader__logo">
+            VELOCITY
+            <span>AUTO</span>
+        </div>
+
+        <div class="preloader__line">
+
+            <div class="preloader__progress"></div>
+
+        </div>
+
+        <p class="preloader__text">
+            Premium Auto Experience
+        </p>
+
+    </div>
+
+
+</div>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header" id="header">
+        <div class="container header__container">
+
+            <a href="./index.html" class="logo">
+                VELOCITY
+                <span>AUTO</span>
+            </a>
+
+            <nav class="header__nav" id="navigation">
+
+                <a
+                    href="./index.html"
+                    class="header__link header__link--active"
+                >
+                    Главная
+                </a>
+
+                <a
+                    href="./pages/cars.html"
+                    class="header__link"
+                >
+                    Автомобили
+                </a>
+
+                <a
+                    href="./pages/about.html"
+                    class="header__link"
+                >
+                    О нас
+                </a>
+
+                <a
+                    href="./pages/services.html"
+                    class="header__link"
+                >
+                    Услуги
+                </a>
+
+                <a
+                    href="./pages/contacts.html"
+                    class="header__link"
+                >
+                    Контакты
+                </a>
+
+            </nav>
+
+            <a
+                href="#test-drive"
+                class="header__button"
+                id="openTestDrive"
+            >
+                Тест-драйв
+            </a>
+
+            
+
+            <button
+                class="menu-button"
+                id="menuButton"
+                type="button"
+                aria-label="Открыть меню"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+    </header>
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+        <!-- ================= HERO ================= -->
+
+        <section class="hero" id="home">
+
+            <div class="hero__background"></div>
+            <div class="hero__overlay"></div>
+
+            <div class="container hero__container">
+
+                <div class="hero__content">
+
+                    <p class="hero__eyebrow">
+                        Премиальные автомобили
+                    </p>
+
+                    <h1 class="hero__title">
+                        Автомобиль,
+                        <span>который выбирает тебя</span>
+                    </h1>
+
+                    <p class="hero__description">
+                        Новые и проверенные автомобили
+                        с гарантией, прозрачной историей
+                        и выгодными условиями покупки.
+                    </p>
+
+                    <div class="hero__actions">
+
+                        <a
+                            href="./pages/cars.html"
+                            class="button button--primary"
+                        >
+                            Смотреть каталог
+                        </a>
+
+                        
+
+                    </div>
+
+                    <div class="hero__stats">
+
+                        <div class="hero__stat">
+                            <strong>150+</strong>
+                            <span>автомобилей</span>
+                        </div>
+
+                        <div class="hero__stat">
+                            <strong>8 лет</strong>
+                            <span>на рынке</span>
+                        </div>
+
+                        <div class="hero__stat">
+                            <strong>2500+</strong>
+                            <span>довольных клиентов</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <article class="hero-car">
+
+                    <p class="hero-car__label">
+                        Автомобиль месяца
+                    </p>
+
+                    <h2 class="hero-car__title">
+                        Mercedes-AMG GT
+                    </h2>
+
+                    <div class="hero-car__specifications">
+
+                        <div class="hero-car__specification">
+                            <span>Двигатель</span>
+                            <strong>4.0 V8</strong>
+                        </div>
+
+                        <div class="hero-car__specification">
+                            <span>Мощность</span>
+                            <strong>585 л.с.</strong>
+                        </div>
+
+                        <div class="hero-car__specification">
+                            <span>Разгон</span>
+                            <strong>3.2 сек</strong>
+                        </div>
+
+                    </div>
+
+                    <a
+                        href="./pages/car-details.html?id=1"
+                        class="hero-car__link"
+                    >
+                        Подробнее
+                        <span>→</span>
+                    </a>
+
+                </article>
+
+            </div>
+
+            <a href="#popular-cars" class="hero__scroll">
+                <span>Листайте вниз</span>
+                <i></i>
+            </a>
+
+        </section>
+
+        <!-- ================= POPULAR CARS ================= -->
+
+        <section
+            class="popular section"
+            id="popular-cars"
+        >
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div>
+                        <p class="section-header__subtitle">
+                            Наш каталог
+                        </p>
+
+                        <h2 class="section-header__title">
+                            Популярные автомобили
+                        </h2>
+                    </div>
+
+                    <a
+                        href="./pages/cars.html"
+                        class="section-header__link"
+                    >
+                        Смотреть все
+                        <span>→</span>
+                    </a>
+
+                </div>
+
+                <div class="popular__slider">
+
+                    <button
+                        class="slider-button slider-button--prev"
+                        id="sliderPrev"
+                        type="button"
+                        aria-label="Предыдущий автомобиль"
+                    >
+                        ←
+                    </button>
+
+                    <div
+                        class="popular__grid"
+                        id="popularCars"
+                    >
+                        <!-- JavaScript карточкаларды ушул жерге чыгарат -->
+                    </div>
+
+                    <button
+                        class="slider-button slider-button--next"
+                        id="sliderNext"
+                        type="button"
+                        aria-label="Следующий автомобиль"
+                    >
+                        →
+                    </button>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= ADVANTAGES ================= -->
+
+        <section class="advantages section">
+
+            <div class="container">
+
+                <div class="section-header section-header--center">
+
+                    <p class="section-header__subtitle">
+                        Почему выбирают нас
+                    </p>
+
+                    <h2 class="section-header__title">
+                        Покупка автомобиля без риска
+                    </h2>
+
+                    <p class="section-header__description">
+                        Мы берём на себя все сложные этапы —
+                        от проверки автомобиля до оформления документов.
+                    </p>
+
+                </div>
+
+                <div class="advantages__grid">
+
+                    <article class="advantage-card">
+
+                        <span class="advantage-card__number">
+                            01
+                        </span>
+
+                        <div class="advantage-card__icon">
+                            ✓
+                        </div>
+
+                        <h3 class="advantage-card__title">
+                            Полная проверка
+                        </h3>
+
+                        <p class="advantage-card__text">
+                            Проверяем техническое состояние,
+                            документы и юридическую историю автомобиля.
+                        </p>
+
+                    </article>
+
+                    <article class="advantage-card">
+
+                        <span class="advantage-card__number">
+                            02
+                        </span>
+
+                        <div class="advantage-card__icon">
+                            ★
+                        </div>
+
+                        <h3 class="advantage-card__title">
+                            Гарантия качества
+                        </h3>
+
+                        <p class="advantage-card__text">
+                            Предоставляем гарантию на двигатель,
+                            коробку передач и основные агрегаты.
+                        </p>
+
+                    </article>
+
+                    <article class="advantage-card">
+
+                        <span class="advantage-card__number">
+                            03
+                        </span>
+
+                        <div class="advantage-card__icon">
+                            %
+                        </div>
+
+                        <h3 class="advantage-card__title">
+                            Кредит и рассрочка
+                        </h3>
+
+                        <p class="advantage-card__text">
+                            Выгодные условия финансирования
+                            с удобным ежемесячным платежом.
+                        </p>
+
+                    </article>
+
+                    <article class="advantage-card">
+
+                        <span class="advantage-card__number">
+                            04
+                        </span>
+
+                        <div class="advantage-card__icon">
+                            ↗
+                        </div>
+
+                        <h3 class="advantage-card__title">
+                            Trade-in
+                        </h3>
+
+                        <p class="advantage-card__text">
+                            Обменяйте старый автомобиль
+                            на новый с выгодной доплатой.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= ABOUT PREVIEW ================= -->
+
+        <section class="about-preview section">
+
+            <div class="container about-preview__container">
+
+                <div class="about-preview__image">
+
+                    <img
+                        src="./images/about-showroom.jpg"
+                        alt="Автосалон Velocity Auto"
+                    >
+
+                </div>
+
+                <div class="about-preview__content">
+
+                    <p class="section-header__subtitle">
+                        О нас
+                    </p>
+
+                    <h2 class="section-header__title">
+                        Надёжный автосалон
+                        в Бишкеке
+                    </h2>
+
+                    <p class="about-preview__text">
+                        Velocity Auto — современный автосалон с большим выбором
+                        проверенных автомобилей, прозрачными условиями покупки
+                        и профессиональным обслуживанием.
+                    </p>
+
+                    <ul class="about-preview__list">
+
+                        <li>
+                            Проверенные автомобили
+                        </li>
+
+                        <li>
+                            Помощь в оформлении
+                        </li>
+
+                    </ul>
+
+                    <a
+                        href="./pages/about.html"
+                        class="button button--primary"
+                    >
+                        Подробнее
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================= TEST DRIVE ================= -->
+
+        <section
+            class="test-drive section test-drive--hidden"
+            id="test-drive"
+        >
+
+            <div class="test-drive__background"></div>
+            <div class="test-drive__overlay"></div>
+
+            <div class="container test-drive__container">
+
+                <div class="test-drive__content">
+
+                    <p class="section-header__subtitle">
+                        Запишитесь сейчас
+                    </p>
+
+                    <h2 class="test-drive__title">
+                        Почувствуйте автомобиль
+                        на дороге
+                    </h2>
+
+                    <p class="test-drive__text">
+                        Оставьте заявку, и наш менеджер
+                        свяжется с вами для подтверждения
+                        даты и времени тест-драйва.
+                    </p>
+
+                </div>
+
+                <form
+                    class="test-drive__form"
+                    id="testDriveForm"
+                >
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            Ваше имя
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Введите имя"
+                            required
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="phone">
+                            Номер телефона
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="+996 555 00 00 00"
+                            required
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="carModel">
+                            Выберите автомобиль
+                        </label>
+
+                        <select
+                            id="carModel"
+                            name="carModel"
+                            required
+                        >
+
+                            <option value="">
+                                Выберите модель
+                            </option>
+
+                            <option value="Mercedes-AMG GT">
+                                Mercedes-AMG GT
+                            </option>
+
+                            <option value="BMW M4 Competition">
+                                BMW M4 Competition
+                            </option>
+
+                            <option value="Toyota Land Cruiser 300">
+                                Toyota Land Cruiser 300
+                            </option>
+
+                            <option value="Porsche Cayenne">
+                                Porsche Cayenne
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="button button--primary test-drive__button"
+                    >
+                        Записаться на тест-драйв
+                    </button>
+
+                    <p
+                        class="form-message"
+                        id="formMessage"
+                    ></p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container footer__container">
+
+            <div class="footer__about">
+
+                <a href="./index.html" class="logo">
+                    VELOCITY
+                    <span>AUTO</span>
+                </a>
+
+                <p>
+                    Продажа новых и автомобилей с пробегом.
+                    Гарантия качества, Trade-In и выгодные условия покупки.
+                </p>
+
+            </div>
+
+            <div class="footer__column">
+
+                <h3>Навигация</h3>
+
+                <a href="./index.html">
+                    Главная
+                </a>
+
+                <a href="./pages/cars.html">
+                    Автомобили
+                </a>
+
+                <a href="./pages/about.html">
+                    О нас
+                </a>
+
+                <a href="./pages/services.html">
+                    Услуги
+                </a>
+
+                <a href="./pages/contacts.html">
+                    Контакты
+                </a>
+
+                
+
+            </div>
+
+            <div class="footer__column">
+
+                <h3>Контакты</h3>
+
+                <a href="tel:+996224112233">
+                    +996 224 11 22 33
+                </a>
+
+                <a href="mailto:myrzabek055@gmail.com">
+                    myrzabek055@gmail.com
+                </a>
+
+                <p>
+                    Бишкек, мкр. Улан-2, 7-Апрель 130/9
+                </p>
+
+            </div>
+
+            <div class="footer__column">
+
+                <h3>График работы</h3>
+
+                <p>
+                    Пн – Сб: 09:00 – 18:00
+                </p>
+
+                <p>
+                    Вс: Выходной
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="container footer__bottom">
+
+            <p>
+                © <span id="currentYear"></span>
+                Velocity Auto. Все права защищены.
+            </p>
+
+            
+
+        </div>
+
+    </footer>
+
+    <!-- JavaScript -->
+
+    <script src="./js/main.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/cars.js"></script>
+    <script src="./js/slider.js"></script>
+    <script src="./js/form.js"></script>
+    <script src="./js/preloader.js"></script>
+
+</body>
+</html>

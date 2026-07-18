@@ -1,0 +1,365 @@
+/* =========================================
+   LARGE TABLETS
+========================================= */
+
+@media (max-width: 1100px) {
+    .header__nav {
+        gap: 20px;
+    }
+
+    .hero__container {
+        grid-template-columns: 1fr 340px;
+        gap: 40px;
+    }
+
+    .hero__title {
+        font-size: 68px;
+    }
+
+    .advantages__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-preview__container {
+        gap: 50px;
+    }
+
+    .test-drive__container {
+        grid-template-columns: 1fr 430px;
+        gap: 45px;
+    }
+
+    .footer__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================
+   TABLETS
+========================================= */
+
+@media (max-width: 900px) {
+    .section {
+        padding: 85px 0;
+    }
+
+    .header__container {
+        min-height: 72px;
+    }
+
+    .header__nav {
+        position: fixed;
+        top: 72px;
+        right: -100%;
+
+        width: min(360px, 100%);
+        height: calc(100vh - 72px);
+        padding: 40px 30px;
+
+        background-color: rgba(8, 8, 8, 0.98);
+
+        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(20px);
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+
+        transition: right 0.4s ease;
+    }
+
+    .header__nav--active {
+        right: 0;
+    }
+
+    .header__link {
+        width: 100%;
+        padding: 18px 0;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+        font-size: 16px;
+    }
+
+    .header__link::after {
+        display: none;
+    }
+
+    .header__button {
+        display: none;
+    }
+
+    .menu-button {
+        display: flex;
+    }
+
+    .hero {
+        min-height: auto;
+        padding-top: 72px;
+    }
+
+    .hero__container {
+        min-height: auto;
+        padding-top: 110px;
+        padding-bottom: 120px;
+
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .hero__content {
+        max-width: 700px;
+    }
+
+    .hero__title {
+        font-size: clamp(52px, 10vw, 78px);
+    }
+
+    .hero-car {
+        max-width: 500px;
+        align-self: auto;
+    }
+
+    .popular__grid {
+        grid-template-columns: repeat(3, minmax(300px, 1fr));
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+    }
+
+    .popular__grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .car-card {
+        scroll-snap-align: start;
+    }
+
+    .slider-button--prev {
+        left: 10px;
+    }
+
+    .slider-button--next {
+        right: 10px;
+    }
+
+    .about-preview__container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-preview__image {
+        min-height: auto;
+    }
+
+    .about-preview__image img {
+        height: 480px;
+    }
+
+    .about-preview__content {
+        max-width: 100%;
+    }
+
+    .test-drive__container {
+        grid-template-columns: 1fr;
+    }
+
+    .test-drive__content {
+        max-width: 700px;
+    }
+
+    .test-drive__form {
+        max-width: 650px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+    .container {
+        width: min(100% - 30px, var(--container-width));
+    }
+
+    .section {
+        padding: 70px 0;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .hero__container {
+        padding-top: 80px;
+        padding-bottom: 100px;
+    }
+
+    .hero__title {
+        margin-bottom: 20px;
+
+        font-size: clamp(42px, 13vw, 62px);
+        letter-spacing: -2px;
+    }
+
+    .hero__description {
+        font-size: 15px;
+    }
+
+    .hero__actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero__actions .button {
+        width: 100%;
+    }
+
+    .hero__stats {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .hero__stat {
+        min-width: 0;
+        margin: 0;
+        padding: 0;
+        border-right: none;
+    }
+
+    .hero__stat:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .hero-car {
+        padding: 24px;
+    }
+
+    .hero-car__specifications {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-car__specification {
+        padding: 0 0 12px;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .hero-car__specification:last-child {
+        border-bottom: none;
+    }
+
+    .hero__scroll {
+        display: none;
+    }
+
+    .section-header {
+        margin-bottom: 38px;
+
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .section-header__title {
+        font-size: 36px;
+    }
+
+    .popular__grid {
+        grid-template-columns: repeat(3, minmax(280px, 85vw));
+        gap: 16px;
+    }
+
+    .slider-button {
+        width: 44px;
+        height: 44px;
+    }
+
+    .car-card__image {
+        height: 230px;
+    }
+
+    .advantages__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .advantage-card {
+        min-height: auto;
+    }
+
+    .about-preview__image img {
+        height: 380px;
+    }
+
+    .about-preview__experience {
+        right: 15px;
+        bottom: 20px;
+    }
+
+    .test-drive__title {
+        font-size: 38px;
+    }
+
+    .test-drive__form {
+        padding: 28px 20px;
+    }
+
+    .footer__container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .footer__bottom {
+        padding: 20px 0;
+
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 430px) {
+    .hero__title {
+        font-size: 40px;
+    }
+
+    .hero__eyebrow {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .hero__stats {
+        grid-template-columns: 1fr;
+    }
+
+    .hero__stat:last-child {
+        grid-column: auto;
+    }
+
+    .section-header__title {
+        font-size: 31px;
+    }
+
+    .about-preview__image img {
+        height: 320px;
+    }
+
+    .about-preview__experience {
+        min-width: 135px;
+        padding: 18px;
+    }
+
+    .about-preview__experience strong {
+        font-size: 35px;
+    }
+
+    .test-drive__title {
+        font-size: 32px;
+    }
+}

@@ -1,0 +1,344 @@
+.featured-car {
+    position: relative;
+    min-height: 760px;
+    overflow: hidden;
+
+    background-color: #070707;
+}
+
+.featured-car__background {
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 70% 50%,
+            rgba(217, 164, 65, 0.16),
+            transparent 38%
+        ),
+        linear-gradient(
+            120deg,
+            #070707 0%,
+            #0e0e0e 52%,
+            #050505 100%
+        );
+}
+
+.featured-car__overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        repeating-linear-gradient(
+            90deg,
+            transparent 0,
+            transparent 99px,
+            rgba(255, 255, 255, 0.025) 100px
+        );
+}
+
+.featured-car__container {
+    position: relative;
+    z-index: 2;
+
+    min-height: 620px;
+
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.featured-car__content {
+    max-width: 590px;
+}
+
+.featured-car__title {
+    margin-bottom: 25px;
+
+    font-size: clamp(52px, 7vw, 90px);
+    font-weight: 900;
+    line-height: 0.95;
+    letter-spacing: -4px;
+    text-transform: uppercase;
+}
+
+.featured-car__title span {
+    display: block;
+
+    color: var(--color-accent);
+}
+
+.featured-car__description {
+    max-width: 560px;
+    margin-bottom: 35px;
+
+    color: var(--color-text);
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.featured-car__specs {
+    margin-bottom: 32px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+
+    background-color: var(--color-border);
+    border: 1px solid var(--color-border);
+}
+
+.featured-car__spec {
+    min-height: 92px;
+    padding: 20px;
+
+    background-color: #0d0d0d;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7px;
+
+    transition: background-color var(--transition);
+}
+
+.featured-car__spec:hover {
+    background-color: rgba(217, 164, 65, 0.08);
+}
+
+.featured-car__spec span {
+    color: var(--color-muted);
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.featured-car__spec strong {
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.featured-car__price {
+    margin-bottom: 32px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.featured-car__price div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.featured-car__price span {
+    color: var(--color-muted);
+
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.featured-car__price strong {
+    color: var(--color-white);
+
+    font-size: 34px;
+    font-weight: 900;
+}
+
+.featured-car__price p {
+    max-width: 170px;
+
+    color: var(--color-text);
+
+    font-size: 12px;
+    text-align: right;
+}
+
+.featured-car__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.featured-car__visual {
+    position: relative;
+
+    min-height: 560px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.featured-car__circle {
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border: 1px solid rgba(217, 164, 65, 0.22);
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 80px rgba(217, 164, 65, 0.08),
+        inset 0 0 80px rgba(217, 164, 65, 0.04);
+}
+
+.featured-car__circle::before,
+.featured-car__circle::after {
+    content: "";
+
+    position: absolute;
+    border-radius: 50%;
+}
+
+.featured-car__circle::before {
+    inset: 45px;
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.featured-car__circle::after {
+    inset: 95px;
+
+    border: 1px dashed rgba(217, 164, 65, 0.18);
+
+    animation: rotateCircle 22s linear infinite;
+}
+
+.featured-car__image {
+    position: relative;
+    z-index: 2;
+
+    width: 115%;
+    max-width: none;
+
+    filter:
+        drop-shadow(0 35px 45px rgba(0, 0, 0, 0.75))
+        brightness(0.94)
+        contrast(1.05);
+
+    transform: translateX(30px);
+
+    transition: transform 0.8s ease;
+}
+
+.featured-car:hover .featured-car__image {
+    transform: translateX(15px) scale(1.03);
+}
+
+.featured-car__badge {
+    position: absolute;
+    right: 0;
+    bottom: 25px;
+    z-index: 3;
+
+    min-width: 150px;
+    padding: 20px 24px;
+
+    border-left: 3px solid var(--color-accent);
+
+    background-color: rgba(10, 10, 10, 0.82);
+
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.featured-car__badge span {
+    color: var(--color-accent);
+
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.featured-car__badge strong {
+    font-size: 24px;
+    font-weight: 900;
+}
+
+@keyframes rotateCircle {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 1000px) {
+    .featured-car__container {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-car__content {
+        max-width: 720px;
+    }
+
+    .featured-car__visual {
+        min-height: 480px;
+    }
+
+    .featured-car__image {
+        width: 100%;
+        transform: none;
+    }
+
+    .featured-car:hover .featured-car__image {
+        transform: scale(1.02);
+    }
+}
+
+@media (max-width: 700px) {
+    .featured-car__title {
+        font-size: 48px;
+        letter-spacing: -2px;
+    }
+
+    .featured-car__specs {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-car__price {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .featured-car__price p {
+        text-align: left;
+    }
+
+    .featured-car__actions {
+        flex-direction: column;
+    }
+
+    .featured-car__actions .button {
+        width: 100%;
+    }
+
+    .featured-car__visual {
+        min-height: 340px;
+    }
+
+    .featured-car__circle {
+        width: 300px;
+        height: 300px;
+    }
+
+    .featured-car__badge {
+        right: 10px;
+        bottom: 0;
+    }
+}

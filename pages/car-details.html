@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Подробная информация об автомобиле в Velocity Auto."
+    >
+
+    <title>Автомобиль — Velocity Auto</title>
+
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/car-details.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+
+    <div class="scroll-progress" id="scrollProgress"></div>
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="container header__container">
+
+            <a href="../index.html" class="logo">
+                VELOCITY
+                <span>AUTO</span>
+            </a>
+
+            <nav class="header__nav" id="navigation">
+
+                <a href="../index.html" class="header__link">
+                    Главная
+                </a>
+
+                <a
+                    href="./cars.html"
+                    class="header__link header__link--active"
+                >
+                    Автомобили
+                </a>
+
+                <a href="./about.html" class="header__link">
+                    О нас
+                </a>
+
+                <a href="./services.html" class="header__link">
+                    Услуги
+                </a>
+
+                <a href="./contacts.html" class="header__link">
+                    Контакты
+                </a>
+
+            </nav>
+
+            <a
+                href="https://wa.me/996224112233"
+                class="header__button"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                WhatsApp
+            </a>
+
+            <button
+                class="menu-button"
+                id="menuButton"
+                type="button"
+                aria-label="Открыть меню"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+    </header>
+
+    <main>
+        <!-- DETAILS CONTENT -->
+        <div id="detailsContent" hidden>
+
+            <!-- BREADCRUMBS -->
+            <section class="details-breadcrumbs">
+
+                <div class="container details-breadcrumbs__container">
+
+                    <a href="../index.html">
+                        Главная
+                    </a>
+
+                    <span>/</span>
+
+                    <a href="./cars.html">
+                        Автомобили
+                    </a>
+
+                    <span>/</span>
+
+                    <strong id="breadcrumbCarName">
+                        Автомобиль
+                    </strong>
+
+                </div>
+
+            </section>
+
+            <!-- CAR MAIN -->
+            <section class="car-details section">
+
+                <div class="container car-details__container">
+
+                    <!-- GALLERY -->
+                    <div class="car-gallery">
+
+                        <div class="car-gallery__main">
+
+                            <img
+                                src=""
+                                alt=""
+                                id="mainCarImage"
+                            >
+
+                            <span
+                                class="car-gallery__badge"
+                                id="detailsBadge"
+                            ></span>
+
+                            <button
+                                class="car-gallery__favorite"
+                                id="detailsFavorite"
+                                type="button"
+                                aria-label="Добавить в избранное"
+                            >
+                                ♡
+                            </button>
+
+                        </div>
+
+                        <div
+                            class="car-gallery__thumbnails"
+                            id="carThumbnails"
+                        ></div>
+
+                    </div>
+
+                    <!-- INFORMATION -->
+                    <div class="car-details__content">
+
+                        <p
+                            class="car-details__brand"
+                            id="detailsBrand"
+                        ></p>
+
+                        <h1
+                            class="car-details__title"
+                            id="detailsTitle"
+                        ></h1>
+
+                        <div class="car-details__meta">
+
+                            <span id="detailsYear"></span>
+
+                            <span>
+                                В наличии
+                            </span>
+
+                            <span>
+                                Проверен
+                            </span>
+
+                        </div>
+
+                        <p class="car-details__description">
+                            Премиальный автомобиль с прозрачной
+                            историей, полной диагностикой и гарантией
+                            от Velocity Auto.
+                        </p>
+
+                        <div class="car-details__price">
+
+                            <span>
+                                Стоимость
+                            </span>
+
+                            <strong id="detailsPrice"></strong>
+
+                            <small>
+                                Доступны кредит и trade-in
+                            </small>
+
+                        </div>
+
+                        <div class="car-details__quick-specs">
+
+                            <div class="quick-spec">
+                                <span>Двигатель</span>
+                                <strong id="detailsEngine"></strong>
+                            </div>
+
+                            <div class="quick-spec">
+                                <span>Мощность</span>
+                                <strong id="detailsPower"></strong>
+                            </div>
+
+                            <div class="quick-spec">
+                                <span>КПП</span>
+                                <strong id="detailsTransmission"></strong>
+                            </div>
+
+                            <div class="quick-spec">
+                                <span>Топливо</span>
+                                <strong id="detailsFuel"></strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- SPECIFICATIONS -->
+            <section class="details-specifications section">
+
+                <div class="container">
+
+                    <div class="section-header">
+
+                        <div>
+                            <p class="section-header__subtitle">
+                                Характеристики
+                            </p>
+
+                            <h2 class="section-header__title">
+                                Технические данные
+                            </h2>
+                        </div>
+
+                    </div>
+
+                    <div class="details-specifications__grid">
+
+                        <div class="specification-row">
+                            <span>Марка</span>
+                            <strong id="specBrand"></strong>
+                        </div>
+
+                        <div class="specification-row">
+                            <span>Модель</span>
+                            <strong id="specModel"></strong>
+                        </div>
+
+                        <div class="specification-row">
+                            <span>Год выпуска</span>
+                            <strong id="specYear"></strong>
+                        </div>
+
+                        <div class="specification-row">
+                            <span>Категория</span>
+                            <strong id="specCategory"></strong>
+                        </div>
+
+                        <div class="specification-row">
+                            <span>Двигатель</span>
+                            <strong id="specEngine"></strong>
+                        </div>
+
+                        <div class="specification-row">
+                            <span>Мощность</span>
+                            <strong id="specPower"></strong>
+                        </div>
+
+                        <div class="specification-row">
+                            <span>Коробка передач</span>
+                            <strong id="specTransmission"></strong>
+                        </div>
+
+                        <div class="specification-row">
+                            <span>Тип топлива</span>
+                            <strong id="specFuel"></strong>
+                        </div>
+
+                        <div class="specification-row">
+                            <span>Привод</span>
+                            <strong>Полный</strong>
+                        </div>
+
+                        <div class="specification-row">
+                            <span>Состояние</span>
+                            <strong>Отличное</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- EQUIPMENT -->
+            <section class="equipment section">
+
+                <div class="container">
+
+                    <div class="section-header section-header--center">
+
+                        <p class="section-header__subtitle">
+                            Комплектация
+                        </p>
+
+                        <h2 class="section-header__title">
+                            Комфорт и безопасность
+                        </h2>
+
+                    </div>
+
+                    <div class="equipment__grid">
+
+                        <article class="equipment-card">
+                            <span>01</span>
+                            <h3>Климат-контроль</h3>
+                            <p>
+                                Автоматическое поддержание
+                                комфортной температуры.
+                            </p>
+                        </article>
+
+                        <article class="equipment-card">
+                            <span>02</span>
+                            <h3>Камеры 360°</h3>
+                            <p>
+                                Полный обзор вокруг автомобиля
+                                во время парковки.
+                            </p>
+                        </article>
+
+                        <article class="equipment-card">
+                            <span>03</span>
+                            <h3>Кожаный салон</h3>
+                            <p>
+                                Премиальные материалы
+                                и электрорегулировки.
+                            </p>
+                        </article>
+
+                        <article class="equipment-card">
+                            <span>04</span>
+                            <h3>Системы безопасности</h3>
+                            <p>
+                                Контроль полосы, слепых зон
+                                и экстренное торможение.
+                            </p>
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    
+
+    <script src="../js/main.js"></script>
+    <script src="../js/menu.js"></script>
+    <script src="../js/car-details.js"></script>
+
+</body>
+</html>

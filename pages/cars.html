@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Каталог автомобилей Velocity Auto. Премиальные, спортивные и семейные автомобили."
+    >
+
+    <title>Автомобили — Velocity Auto</title>
+
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/cars.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/popular.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+
+    <div class="scroll-progress" id="scrollProgress"></div>
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="container header__container">
+
+            <a href="../index.html" class="logo">
+                VELOCITY
+                <span>AUTO</span>
+            </a>
+
+            <nav class="header__nav" id="navigation">
+
+                <a
+                    href="../index.html"
+                    class="header__link"
+                >
+                    Главная
+                </a>
+
+                <a
+                    href="./cars.html"
+                    class="header__link header__link--active"
+                >
+                    Автомобили
+                </a>
+
+                <a
+                    href="./about.html"
+                    class="header__link"
+                >
+                    О нас
+                </a>
+
+                <a
+                    href="./services.html"
+                    class="header__link"
+                >
+                    Услуги
+                </a>
+
+                <a
+                    href="./contacts.html"
+                    class="header__link"
+                >
+                    Контакты
+                </a>
+
+            </nav>
+
+            
+
+            <button
+                class="menu-button"
+                id="menuButton"
+                type="button"
+                aria-label="Открыть меню"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- PAGE HERO -->
+        <section class="catalog-hero">
+
+            <div class="catalog-hero__background"></div>
+            <div class="catalog-hero__overlay"></div>
+
+            <div class="container catalog-hero__container">
+
+                <p class="catalog-hero__subtitle">
+                    Velocity Auto
+                </p>
+
+                <h1 class="catalog-hero__title">
+                    Каталог автомобилей
+                </h1>
+
+                <p class="catalog-hero__text">
+                    Выберите автомобиль, который соответствует
+                    вашему стилю, характеру и возможностям.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- CATALOG -->
+        <section class="catalog section">
+
+            <div class="container">
+
+                <div class="catalog__top">
+
+                    <div>
+                        <p class="section-header__subtitle">
+                            Наш автопарк
+                        </p>
+
+                        <h2 class="section-header__title">
+                            Найдите свой автомобиль
+                        </h2>
+                    </div>
+
+                    <p class="catalog__count">
+                        Найдено:
+                        <strong id="carsCount">0</strong>
+                    </p>
+
+                </div>
+
+                <!-- FILTERS -->
+                <div class="catalog-filters">
+
+                    <div class="catalog-filters__search">
+
+                        <label for="carSearch">
+                            Поиск
+                        </label>
+
+                        <input
+                            type="search"
+                            id="carSearch"
+                            placeholder="Например: BMW, Lexus, Toyota..."
+                        >
+
+                    </div>
+
+                    <div class="catalog-filters__group">
+
+                        <label for="categoryFilter">
+                            Категория
+                        </label>
+
+                        <select id="categoryFilter">
+                            <option value="all">
+                                Все категории
+                            </option>
+
+                            <option value="sedan">
+                                Седаны
+                            </option>
+
+                            <option value="suv">
+                                Кроссоверы и внедорожники
+                            </option>
+
+                            <option value="sport">
+                                Спортивные
+                            </option>
+                        </select>
+
+                    </div>
+
+                    <div class="catalog-filters__group">
+
+                        <label for="sortFilter">
+                            Сортировка
+                        </label>
+
+                        <select id="sortFilter">
+                            <option value="default">
+                                По умолчанию
+                            </option>
+
+                            <option value="price-low">
+                                Сначала дешевле
+                            </option>
+
+                            <option value="price-high">
+                                Сначала дороже
+                            </option>
+
+                            <option value="year-new">
+                                Сначала новые
+                            </option>
+                        </select>
+
+                    </div>
+
+                    <button
+                        class="catalog-filters__reset"
+                        id="resetFilters"
+                        type="button"
+                    >
+                        Сбросить
+                    </button>
+
+                </div>
+
+                <!-- CAR GRID -->
+                <div class="catalog__grid" id="carsCatalog">
+                    <!-- Карточки чыгат -->
+                </div>
+
+                <p class="catalog__empty" id="catalogEmpty">
+                    По вашему запросу автомобили не найдены.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container footer__container">
+
+            <div class="footer__about">
+
+                <a href="../index.html" class="logo">
+                    VELOCITY
+                    <span>AUTO</span>
+                </a>
+
+                <p>
+                    Премиальные и проверенные автомобили
+                    с гарантией и выгодными условиями.
+                </p>
+
+            </div>
+
+            <div class="footer__column">
+
+                <h3>Навигация</h3>
+
+                <a href="../index.html">
+                    Главная
+                </a>
+
+                <a href="./cars.html">
+                    Автомобили
+                </a>
+
+                <a href="./about.html">
+                    О нас
+                </a>
+
+                <a href="./services.html">
+                    Услуги
+                </a>
+
+            </div>
+
+            <div class="footer__column">
+
+                <h3>Контакты</h3>
+
+                <a href="tel:+996555123456">
+                    +996 555 123 456
+                </a>
+
+                <a href="mailto:info@velocityauto.kg">
+                    info@velocityauto.kg
+                </a>
+
+                <p>
+                    г. Бишкек, ул. Ибраимова, 115
+                </p>
+
+            </div>
+
+            <div class="footer__column">
+
+                <h3>График работы</h3>
+
+                <p>Пн – Сб: 09:00 – 20:00</p>
+                <p>Вс: 10:00 – 18:00</p>
+
+            </div>
+
+        </div>
+
+        <div class="container footer__bottom">
+
+            <p>
+                © <span id="currentYear"></span>
+                Velocity Auto. Все права защищены.
+            </p>
+
+            <a href="#">
+                Политика конфиденциальности
+            </a>
+
+        </div>
+
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/menu.js"></script>
+    <script src="../js/catalog.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,249 @@
+.catalog-hero {
+    position: relative;
+    min-height: 560px;
+    padding-top: 82px;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+
+    background-color: #080808;
+}
+
+.catalog-hero__background {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5, 5, 5, 0.95) 0%,
+            rgba(5, 5, 5, 0.7) 48%,
+            rgba(5, 5, 5, 0.2) 100%
+        ),
+        url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=2000&q=88")
+        center / cover no-repeat;
+
+    transform: scale(1.04);
+}
+
+.catalog-hero__overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.1) 0%,
+            rgba(0, 0, 0, 0.1) 58%,
+            rgba(0, 0, 0, 0.92) 100%
+        );
+}
+
+.catalog-hero__container {
+    position: relative;
+    z-index: 2;
+
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.catalog-hero__subtitle {
+    margin-bottom: 16px;
+
+    color: var(--color-accent);
+
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.catalog-hero__title {
+    max-width: 900px;
+    margin-bottom: 22px;
+
+    font-size: clamp(52px, 8vw, 92px);
+    font-weight: 900;
+    line-height: 0.98;
+    letter-spacing: -4px;
+    text-transform: uppercase;
+}
+
+.catalog-hero__text {
+    max-width: 620px;
+
+    color: rgba(255, 255, 255, 0.7);
+
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.catalog {
+    background-color: var(--color-bg-light);
+}
+
+.catalog__top {
+    margin-bottom: 42px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.catalog__count {
+    color: var(--color-muted);
+    font-size: 14px;
+}
+
+.catalog__count strong {
+    color: var(--color-accent);
+    font-size: 18px;
+}
+
+.catalog-filters {
+    margin-bottom: 45px;
+    padding: 24px;
+
+    border: 1px solid var(--color-border);
+
+    background-color: rgba(255, 255, 255, 0.025);
+
+    display: grid;
+    grid-template-columns: 1.7fr 1fr 1fr auto;
+    align-items: end;
+    gap: 18px;
+}
+
+.catalog-filters__search,
+.catalog-filters__group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.catalog-filters label {
+    color: var(--color-white);
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.catalog-filters input,
+.catalog-filters select {
+    min-height: 50px;
+    width: 100%;
+    padding: 0 15px;
+
+    border: 1px solid var(--color-border);
+    outline: none;
+
+    background-color: rgba(255, 255, 255, 0.04);
+    color: var(--color-white);
+
+    transition:
+        border-color var(--transition),
+        background-color var(--transition);
+}
+
+.catalog-filters input::placeholder {
+    color: #747474;
+}
+
+.catalog-filters input:focus,
+.catalog-filters select:focus {
+    border-color: var(--color-accent);
+    background-color: rgba(255, 255, 255, 0.07);
+}
+
+.catalog-filters select option {
+    background-color: #111111;
+    color: var(--color-white);
+}
+
+.catalog-filters__reset {
+    min-height: 50px;
+    padding: 0 22px;
+
+    border: 1px solid var(--color-accent);
+
+    background-color: transparent;
+    color: var(--color-accent);
+
+    font-size: 13px;
+    font-weight: 800;
+
+    transition:
+        background-color var(--transition),
+        color var(--transition),
+        transform var(--transition);
+}
+
+.catalog-filters__reset:hover {
+    background-color: var(--color-accent);
+    color: #111111;
+    transform: translateY(-2px);
+}
+
+.catalog__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.catalog__empty {
+    display: none;
+
+    padding: 70px 20px;
+
+    color: var(--color-text);
+
+    font-size: 16px;
+    text-align: center;
+}
+
+.catalog__empty--visible {
+    display: block;
+}
+
+@media (max-width: 1100px) {
+    .catalog-filters {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .catalog__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .catalog-hero {
+        min-height: 480px;
+        padding-top: 72px;
+    }
+
+    .catalog-hero__title {
+        font-size: 46px;
+        letter-spacing: -2px;
+    }
+
+    .catalog-hero__text {
+        font-size: 15px;
+    }
+
+    .catalog__top {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .catalog-filters {
+        padding: 18px;
+
+        grid-template-columns: 1fr;
+    }
+
+    .catalog__grid {
+        grid-template-columns: 1fr;
+    }
+}
