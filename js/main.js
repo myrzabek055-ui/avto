@@ -40,8 +40,6 @@ const revealElements = document.querySelectorAll(
     ".section-header, " +
     ".car-card, " +
     ".advantage-card, " +
-    ".about-preview__image, " +
-    ".about-preview__content, " +
     ".test-drive__content, " +
     ".test-drive__form"
 );

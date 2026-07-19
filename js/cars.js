@@ -33,7 +33,7 @@ function createCarCard(car) {
             <div class="car-card__image">
 
                 <img
-                    src="${car.image}"
+                    src="${car.image.replace("../", "./")}"
                     alt="${car.brand} ${car.model}"
                 >
 
